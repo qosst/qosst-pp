@@ -1,0 +1,9 @@
+qosst-core
+cryptomite
+Sphinx
+sphinx-rtd-theme
+docstr-coverage
+myst-parser
+sphinx-prompt
+sphinx-argparse-cli
+sphinxcontrib-programoutput
