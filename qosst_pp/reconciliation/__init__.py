@@ -15,9 +15,5 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 """
-This is the qosst_pp module.
-
-It contains classes and functions for error reconciliation and privacy amplification.
+Reconciliation submodule.
 """
-
-__version__ = "0.10.1.dev1"

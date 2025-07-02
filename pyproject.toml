@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "qosst-pp"
-version = "0.10.1"
+version = "0.10.1.dev1"
 description = "Post-processing submodule of QOSST, containing modules for information reconciliation and privacy amplification."
 authors = ["Yoann Piétri <Yoann.Pietri@lip6.fr>"]
 packages = [{ include = "qosst_pp" }, { include = "qosst_pp/py.typed" }]
@@ -24,6 +24,7 @@ python = ">=3.9, <3.14"
 qosst-core = { git = "https://github.com/qosst/qosst-core", branch = "post-processing" }
 #qosst-core = "^0.10.1"
 #cryptomite = "^0.2.2"
+zmq = { version = "^0.0.0", extras = ["remote-pp"] }
 
 [tool.poetry.group.dev.dependencies]
 Sphinx = [
@@ -47,9 +48,12 @@ mypy = "^1.3.0"
 pylint = "^3.3.0"
 black = "^23.9.1"
 
+
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools", "wheel"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 qosst-pp = "qosst_pp.commands:main"
+qosst-pp-server-alice = "qosst_pp.reconciliation.reconciliation_server_alice:main"
+qosst-pp-server-bob = "qosst_pp.reconciliation.reconciliation_server_bob:main"
