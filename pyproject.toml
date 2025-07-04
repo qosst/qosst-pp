@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "qosst-pp"
-version = "0.10.1.dev1"
+version = "0.10.1.dev2"
 description = "Post-processing submodule of QOSST, containing modules for information reconciliation and privacy amplification."
 authors = ["Yoann Piétri <Yoann.Pietri@lip6.fr>"]
 packages = [{ include = "qosst_pp" }, { include = "qosst_pp/py.typed" }]

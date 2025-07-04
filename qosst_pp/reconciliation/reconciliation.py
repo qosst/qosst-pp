@@ -134,7 +134,7 @@ def reconcile_alice(
     socket.send(QOSSTCodes.EC_FINISHED)
 
     # Make the array flat (instead of list of blocks)
-    reconciled_key = list(np.ravel(alice_final_keys))
+    reconciled_key = np.ravel(alice_final_keys).tolist()
     logger.info("Reconciled key has length %i", len(reconciled_key))
     return reconciled_key
 
@@ -216,7 +216,7 @@ def reconcile_bob(
     logger.info("Final discard flags %s", str(final_discard_flags))
 
     # Make the array flat (instead of list of blocks)
-    reconciled_key = list(np.ravel(bob_final_keys))
+    reconciled_key = np.ravel(bob_final_keys).tolist()
     logger.info("Reconciled key has length %i", len(reconciled_key))
 
     return reconciled_key
